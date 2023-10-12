@@ -1,6 +1,5 @@
 const express = require('express');
-const{home} = require("../controller/marketplace");
-const {api} = require("../controller/marketplace");
+const {home, api, products} = require("../controller/marketplace");
 
 
 router = express.Router();
