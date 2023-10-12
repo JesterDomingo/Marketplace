@@ -55,7 +55,7 @@ const getProductName = async (req, res) => {
     }   
 }
 
-//Put id - BROKEN(?)
+//Put id
 const updateProducts = async (req, res) =>{
         const productid = req.params.productId
         const {name} = req.body
