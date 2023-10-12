@@ -9,6 +9,9 @@ const app = express()
 app.use(express.json())
 app.use(express.urlencoded({extended: false}))
 app.use("/api", api)
+app.get("/", (req, res) =>{
+    res.send("Welcome to the DressStore Application")
+})
 
 //MongooseDB Connection
 mongoose.connect(process.env.DB_CONNECTION, () => {
