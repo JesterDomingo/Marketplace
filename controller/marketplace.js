@@ -18,16 +18,16 @@ const api = async (req, res) => {
         })
 
         const saveProducts = await newProduct.save()
-        res.status(201).json({success: true, data: savedProducts})
+        res.status(201).json({success: true, data: saveProducts})
     }
     catch(error) {
         res.status(409).json({success: false, data: [], error: error})
     }
 }
 
-const home = (req, res) => {
+const home = async (req, res) => {
     res.json({message:"Welcome to DressStore application."})
-};
+}
 
 module.exports = {
     home,
